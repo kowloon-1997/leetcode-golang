@@ -17,13 +17,12 @@ func PathSum(root *TreeNode, targetSum int) [][]int {
 	return ret
 }
 
+//递归处理
 func generate(root *TreeNode, targetSum int, path []int, ret *[][]int) {
 	path = append(path, root.Val)
 
-	if root.Left == nil && root.Right == nil {
-		if sumArr(path) == targetSum {
-			*ret = append(*ret, path)
-		}
+	if root.Left == nil && root.Right == nil && sumArr(path) == targetSum {
+		*ret = append(*ret, path)
 		return
 	}
 	if root.Left != nil {

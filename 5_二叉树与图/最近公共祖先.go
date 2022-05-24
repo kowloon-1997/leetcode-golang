@@ -68,6 +68,8 @@ func getPathToRoot(root *TreeNode, list []*TreeNode) {
 	}
 }
 
+//优化点， 现在是递归存储了所有的路径， 如果使用栈来进行先序遍历， 就可以 now left right pop 遍历到想要的结果就立刻pop
+
 func main() {
 
 }
